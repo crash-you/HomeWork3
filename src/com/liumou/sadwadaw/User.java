@@ -1,2 +1,4 @@
-package com.liumou.sadwadaw;public class User {
+package com.liumou.sadwadaw;
+
+public class User {
 }

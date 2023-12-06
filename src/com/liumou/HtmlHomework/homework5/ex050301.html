@@ -1,32 +1,32 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <script>
-  function judgeAge() {
-    var age = parseInt(prompt("请输入您的年龄："));
-    var result;
+    <!DOCTYPE html>
+    <html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+        <script>
+      function judgeAge() {
+        var age = parseInt(prompt("请输入您的年龄："));
+        var result;
 
-    if (age < 14) {
-        result = "您是儿童";
-    } else if (age >= 14 && age < 24) {
-        result = "您是青少年";
-    } else if (age >= 24 && age < 40) {
-        result = "您是青年";
-    } else if (age >= 40 && age < 60) {
-        result = "您是中年";
-    } else {
-        result = "您是老年";
+        if (age < 14) {
+            result = "您是儿童";
+        } else if (age >= 14 && age < 24) {
+            result = "您是青少年";
+        } else if (age >= 24 && age < 40) {
+            result = "您是青年";
+        } else if (age >= 40 && age < 60) {
+            result = "您是中年";
+        } else {
+            result = "您是老年";
+        }
+
+        document.getElementById("output").innerHTML = result;
     }
-
-    document.getElementById("output").innerHTML = result;
-}
-</script>
-</head>
-<body>
-    <button onclick="judgeAge()">判断年龄</button>
-    <p id="output"></p>    
-</body>
-</html>
+    </script>
+    </head>
+    <body>
+        <button onclick="judgeAge()">判断年龄</button>
+        <p id="output"></p>
+    </body>
+    </html>

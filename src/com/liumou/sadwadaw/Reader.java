@@ -1,2 +1,4 @@
-package com.liumou.sadwadaw;public class Reader {
+package com.liumou.sadwadaw;
+
+public class Reader extends User{
 }

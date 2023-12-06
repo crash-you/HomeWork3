@@ -1,17 +1,18 @@
 <!DOCTYPE html>
 <html>
-    <head>
-        <title>ex070303</title>
-    </head>
-    <body>
-        <script>
-            var today,prompt;
-            var week = ["星期日","星期一","星期二","星期三","星期四","星期五","星期六"]
-            today = new Date();
-            prompt = "现在是" + today.getFullYear() + "年" + (today.getMonth()+1) + "月" + (today.getDate()) + "日";
-            prompt = prompt + today.getHours() + "点" + today.getMinutes() + "分" + today.getSeconds() + "秒";
-            prompt = prompt + "(" + week[today.getDay()] + ")," + "欢迎您的到访！"
-            document.write(prompt);
-        </script>
-    </body>
+<head>
+    <meta charset="UTF-8">
+    <title>ex070303</title>
+</head>
+<body>
+<script>
+    var today, promptMessage; // 声明变量，避免覆盖全局变量
+    var week = ["星期日","星期一","星期二","星期三","星期四","星期五","星期六"];
+    today = new Date();
+    promptMessage = "现在是" + today.getFullYear() + "年" + (today.getMonth()+1) + "月" + (today.getDate()) + "日";
+    promptMessage += today.getHours() + "点" + today.getMinutes() + "分" + today.getSeconds() + "秒";
+    promptMessage += "(" + week[today.getDay()] + ")," + "欢迎您的到访！"; // 拼接显示信息
+    document.write(promptMessage);
+</script>
+</body>
 </html>

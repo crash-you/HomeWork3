@@ -1,0 +1,22 @@
+body {
+    font-family: "楷体GB2312", "Times";
+}
+
+h1 {
+    font-size: 28px;
+}
+
+h2 {
+    font-size: 24px;
+}
+
+p {
+    font-size: 16px;
+    text-indent: 2em;
+}
+
+hr {
+    width: 300px;
+    text-align: left;
+    margin-left: 0;
+}

@@ -1,4 +1,4 @@
-package com.liumou.test.small7;
+package com.liumou.examine.small7;
 
 public class test {
     public static void main(String[] args) {
@@ -17,7 +17,7 @@ public class test {
         simulateQueues.put("14");
         simulateQueues.put("41");
         simulateQueues.put("43");
-        simulateQueues.put("44");
+//        simulateQueues.put("44");
         System.out.println(simulateQueues.size());
         System.out.println(simulateQueues.get());
     }

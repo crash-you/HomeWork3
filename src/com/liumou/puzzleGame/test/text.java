@@ -1,4 +1,4 @@
-package com.liumour.Text;
+package com.liumou.puzzleGame.test;
 
 import java.util.Random;
 
@@ -19,6 +19,14 @@ public class text {
         for (int i = 0; i < tempArr.length; i++) {
             data[i / 4] [i % 4] = tempArr[i];
         }
+
+        for (int i = 0; i < 4; i++) {
+            for (int j = 0; j < 4; j++) {
+                System.out.print(data[i][j] + " ");
+            }
+            System.out.println();
+        }
+
     }
-    }
+}
 

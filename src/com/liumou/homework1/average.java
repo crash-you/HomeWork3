@@ -1,4 +1,4 @@
-package com.liumou;
+package com.liumou.homework1;
 
 import java.util.Scanner;
 

@@ -1,2 +1,4 @@
-package com.liumou.sadwadaw;public class BorrowingManagement {
+package com.liumou.sadwadaw;
+
+public class BorrowingManagement extends Administrator   {
 }

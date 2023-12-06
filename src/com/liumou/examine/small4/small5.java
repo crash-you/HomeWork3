@@ -1,4 +1,4 @@
-package com.liumou.test.small4;
+package com.liumou.examine.small4;
 
 import java.util.HashMap;
 import java.util.Map;

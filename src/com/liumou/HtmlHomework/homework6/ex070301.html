@@ -1,10 +1,28 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <title>$Title$</title>
+    <meta charset="UTF-8">
+    <title>ex070301</title>
 </head>
 <body>
-$END$
+<script>
+    // 声明变量
+    var x, square, square_root, logarithm;
+
+    // 通过提示框获取用户输入的值并转换为浮点数
+    x = parseFloat(prompt("请输入x的值： ", "0"));
+
+    // 计算 x 的平方
+    square = Math.pow(x, 2);
+
+    // 计算 x 的平方根
+    square_root = Math.sqrt(x);
+
+    // 计算 x 的自然对数
+    logarithm = Math.log(x);
+
+    // 在页面中输出结果
+    document.write("x 的平方：" + square + "</br>" + "x 的平方根：" + square_root + "</br>" + "x 的自然对数：" + logarithm);
+</script>
 </body>
 </html>

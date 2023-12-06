@@ -1,4 +1,4 @@
-package com.liumou.test.small7;
+package com.liumou.examine.small7;
 
 import java.util.ArrayList;
 

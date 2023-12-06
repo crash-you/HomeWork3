@@ -1,6 +1,6 @@
 package com.liumou.examine.small2;
 
-public class small {
+public class NewUpperCase {
 
     public static void main(String[] args) {
 

@@ -1,4 +1,4 @@
-package com.liumou.test.small3;
+package com.liumou.examine.small3;
 
 public class Person {
 

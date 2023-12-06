@@ -1,4 +1,4 @@
-package com.liumou.test.small6;
+package com.liumou.examine.small6;
 
 import java.util.Scanner;
 

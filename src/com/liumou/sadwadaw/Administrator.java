@@ -1,2 +1,4 @@
-package com.liumou.sadwadaw;public class Administrator {
+package com.liumou.sadwadaw;
+
+public class Administrator extends User{
 }

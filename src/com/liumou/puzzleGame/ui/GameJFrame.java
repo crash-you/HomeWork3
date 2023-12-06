@@ -1,4 +1,4 @@
-package com.liumour.ui;
+package com.liumou.puzzleGame.ui;
 
 import javax.swing.*;
 import javax.swing.border.BevelBorder;
@@ -10,16 +10,20 @@ import java.awt.event.KeyListener;
 import java.util.Random;
 
 public class GameJFrame extends JFrame implements KeyListener, ActionListener {
+
     int[][] data = new int[4][4];
 
     //游戏主界面
     public GameJFrame() {
+        //初始化界面
         initJFrame();
 
+        //初始化菜单
         initJMenuBar();
 
         initData();
 
+        //初始化图片
         initImage();
 
         //设置界面是否打开
@@ -41,7 +45,7 @@ public class GameJFrame extends JFrame implements KeyListener, ActionListener {
 
     int step = 0;
 
-    String path = "image\\animal\\animal3\\";
+    String path = "E:\\HomeWork\\javabasic1\\image\\animal\\animal3\\";
 
     JMenuItem replayMenu = new JMenuItem("重新游戏");
     JMenuItem reLoginMenu = new JMenuItem("重新登录");
@@ -50,6 +54,7 @@ public class GameJFrame extends JFrame implements KeyListener, ActionListener {
     JMenuItem accountMenu = new JMenuItem("二维码付款");
 
     private void initData() {
+        //打乱数据
         int[] tempArr = {0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15};
         Random r = new Random();
         for (int i = 0; i < tempArr.length; i++) {
@@ -77,7 +82,7 @@ public class GameJFrame extends JFrame implements KeyListener, ActionListener {
         this.getContentPane().removeAll();
 
         if (victory()){
-            JLabel winJLabel = new JLabel(new ImageIcon("E:\\zixuezhilu--java\\Javase\\puzzleGame\\image\\win.png"));
+            JLabel winJLabel = new JLabel(new ImageIcon("E:\\HomeWork\\javabasic1\\image\\win.png"));
             winJLabel.setBounds(203,283,197,73);
             this.getContentPane().add(winJLabel);
         }
@@ -92,7 +97,7 @@ public class GameJFrame extends JFrame implements KeyListener, ActionListener {
                 //创建一个ImageIcon对象
                 //创建一个JLabel对象(管理容器)
                 JLabel jLabel = new JLabel(new ImageIcon(path + num + ".jpg"));
-                //  指定图片位置
+                //  指定图片位置,坐标以左上角为零点
                 jLabel.setBounds(105 * j + 83, 105 * i + 134, 105, 105);
                 //设置边框
                 jLabel.setBorder(new BevelBorder(0));
@@ -100,8 +105,9 @@ public class GameJFrame extends JFrame implements KeyListener, ActionListener {
                 this.getContentPane().add(jLabel);
             }
         }
-//先加载的在上方，后加载的在外边
-        ImageIcon bg = new ImageIcon("image\\background.png");
+
+        //先加载的在上方，后加载的在外边
+        ImageIcon bg = new ImageIcon("javabasic1\\image\\background.png");
         JLabel background = new JLabel(bg);
         background.setBounds(40, 40, 508, 560);
         this.getContentPane().add(background);
@@ -121,7 +127,6 @@ public class GameJFrame extends JFrame implements KeyListener, ActionListener {
 
         //创建选项下的条目对象
 
-
         //将下面每一个条目添加刀选项条目中
         functionMenu.add(replayMenu);
         functionMenu.add(reLoginMenu);
@@ -133,6 +138,7 @@ public class GameJFrame extends JFrame implements KeyListener, ActionListener {
         replayMenu.addActionListener(this);
         reLoginMenu.addActionListener(this);
         closeMenu.addActionListener(this);
+
         accountMenu.addActionListener(this);
 
         //将菜单里的两个选项添加到菜单中
@@ -140,32 +146,33 @@ public class GameJFrame extends JFrame implements KeyListener, ActionListener {
         jMenuBar.add(aboutMenu);
 
 
-        // 给整个界面设置菜单
+        // 给整个界面设置菜单，将上面的选项统一放在 GameJFrame 窗体中
         this.setJMenuBar(jMenuBar);
     }
 
     private void initJFrame() {
-        //设置界面宽高
+        //设置界面宽高，单位像素
         this.setSize(603, 680);
         //设置界面标题
         this.setTitle("拼图游戏单机版");
-        //设置界面置顶
+        //设置界面置顶,指点击其他空白不会消失
         this.setAlwaysOnTop(true);
         //设置界面居中
         this.setLocationRelativeTo(null);
-        //设置关闭模式
+        //设置关闭模式，关闭页面则程序停止
         this.setDefaultCloseOperation(3);
         //设置取消的居中放置，只有取消了才会按照xy轴的形式添加组件
         this.setLayout(null);
         //给整个事件添加键盘监听事件
+        //参数this表示当事件被触发后，会执行本类中的代码
         this.addKeyListener(this);
     }
 
     @Override
     public void keyTyped(KeyEvent keyEvent) {
-
     }
 
+    //按键盘时调用
     @Override
     public void keyPressed(KeyEvent keyEvent) {
 
@@ -185,6 +192,7 @@ public class GameJFrame extends JFrame implements KeyListener, ActionListener {
         }
     }
 
+    //键盘松开时调用
     @Override
     public void keyReleased(KeyEvent keyEvent) {
 
@@ -292,7 +300,7 @@ public class GameJFrame extends JFrame implements KeyListener, ActionListener {
             //创建一个弹窗对象
             JDialog jDialog = new JDialog();
             //创建一个管理图片容器的对象JLabel
-            JLabel jLabel = new JLabel(new ImageIcon("image\\QQ).jpg"));
+            JLabel jLabel = new JLabel(new ImageIcon("E:\\HomeWork\\javabasic1\\image\\QQ).jpg"));
             jLabel.setBounds(0,0,258,258);
             //图片添加到弹框中
             jDialog.getContentPane().add(jLabel);
@@ -306,9 +314,6 @@ public class GameJFrame extends JFrame implements KeyListener, ActionListener {
             jDialog.setModal(true);
             //让弹框显示出来
             jDialog.setVisible(true);
-
-
-
         }
     }
 }

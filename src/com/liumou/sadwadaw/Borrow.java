@@ -1,2 +1,4 @@
-package com.liumou.sadwadaw;public class Borrow {
+package com.liumou.sadwadaw;
+
+public class Borrow extends BorrowingManagement{
 }

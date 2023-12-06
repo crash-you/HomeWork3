@@ -4,7 +4,7 @@ import java.util.Collections;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
-public class main2 {
+public class Landlords2 {
         public static void main(String[] args) {
             // 准备花色
             List<String> color = new ArrayList<>();
