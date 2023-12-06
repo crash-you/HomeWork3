@@ -1,0 +1,30 @@
+/* 外层容器 */
+.outer-container {
+    display: flex; /* 使用 Flexbox 布局 */
+    width: 70%;
+    margin: 0 auto; /* 居中 */
+}
+
+/* 内层盒子 */
+.inner-box {
+    width: 50%; /* 每列宽度为50% */
+    background-color: #ddd; /* 灰色背景 */
+    padding: 15px; /* 内边距 */
+    box-sizing: border-box; /* 盒模型包括内边距和边框 */
+    margin-right: 15px; /* 两列之间的间隙为15px */
+}
+
+/* 右侧内层盒子去掉右边距，保持两列 */
+.inner-box:last-child {
+    margin-right: 0; /* 最后一个盒子不需要右边距 */
+}
+
+/* 标题样式 */
+h2 {
+    color: #333; /* 黑色文字 */
+}
+
+/* 段落样式 */
+p {
+    color: #666; /* 深灰色文字 */
+}

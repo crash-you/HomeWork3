@@ -1,0 +1,31 @@
+del {
+    text-decoration: none;
+    background-color: #ddd;
+}
+
+ins {
+    text-decoration: none;
+    color: red;
+}
+
+body {
+    margin-top: 1cm;
+    margin-bottom: 1cm;
+    margin-left: 3cm;
+    margin-right: 3cm;
+}
+
+h1 {
+    border: 5px solid green;
+    margin: 5px 0;
+    background-color: silver;
+}
+
+p {
+    margin: 2px 0;
+    padding: 2px;
+    border-top: thin solid gray;
+    border-bottom: thick solid gray;
+    border-left: medium solid gray;
+    border-right: medium solid gray;
+}

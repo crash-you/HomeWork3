@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>求最小值</title>
+    <script>
+        function findMin() {
+            var x = parseFloat(prompt("请输入x的值:"));
+            var y = parseFloat(prompt("请输入y的值:"));
+            var min;
+            
+            if (x < y) {
+                min = x;
+            } else {
+                min = y;
+            }
+            
+            alert("最小值为: " + min);
+        }
+    </script>
+</head>
+<body>
+    <button onclick="findMin()">求最小值</button>
+</body>
+</html>

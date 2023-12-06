@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>ex070308</title>
+        <script>
+            // 判断某个年份是否是闰年
+            function IsLeapYear(y){
+                if(y%4==0)
+                    return 1;
+                else
+                    return 0;
+            }
+            // 接收一个日期，返回该日期是所在年份的第几天
+            function DayOfYear(day){
+                var months = new Array(31,28,31,30,31,30,31,31,30,31,30,31);
+                var years = IsLeapYear(day.getFullYear());
+                if(years==1)
+                    months[1] = 29;
+                else
+                    months[1] = 28;
+                var today =0,sum = 0;
+                for(i = 0;i<(day.getMonth()-1);i++)
+                {
+                    today = today + months[i];
+                }
+                today ="该日期是该年的第" + (today + day.getDate()) + "天";
+                document.write(today);
+            }
+        </script>
+    </head>
+    <body>
+        <script>
+            var year = parseFloat(prompt("请输入年份：","0"));
+            var month =  parseFloat(prompt("请输入月份：","0"));
+            var today = parseFloat(prompt("请输入日期：","0"));
+            var day = new Date(year,month,today);
+            DayOfYear(day);
+        </script>
+    </body>
+</html>

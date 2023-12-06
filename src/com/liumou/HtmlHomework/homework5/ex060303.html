@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>非负整数同时被3，5，7整除输出</title>
+    <script>
+        function checkDivisible() {
+            var result = "";
+            for (var i = 1; i <= 1000; i++) {
+                if (i % 3 === 0 && i % 5 === 0 && i % 7 === 0) {
+                    result += i + " ";
+                    if (i % 6 === 0) {
+                        result += "<br>"; // 每行显示6个数，插入换行符
+                    }
+                }
+            }
+            document.getElementById("output").innerHTML = result;
+        }
+    </script>
+</head>
+<body>
+    <h1>判断整数能否被3、5、7整除</h1>
+    <button onclick="checkDivisible()">点击查看结果</button>
+    <div id="output"></div>
+</body>
+</html>

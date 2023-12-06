@@ -1,0 +1,14 @@
+
+#ad {
+    position: fixed;
+    top: 0;
+    right: 0;
+    width: 100px;
+    background-color: silver;
+    border: 1px solid green;
+}
+
+#ad a {
+    display: block;
+    font-size: 12px;
+}

@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>ex070303</title>
+    </head>
+    <body>
+        <script>
+            var today,prompt;
+            var week = ["星期日","星期一","星期二","星期三","星期四","星期五","星期六"]
+            today = new Date();
+            prompt = "现在是" + today.getFullYear() + "年" + (today.getMonth()+1) + "月" + (today.getDate()) + "日";
+            prompt = prompt + today.getHours() + "点" + today.getMinutes() + "分" + today.getSeconds() + "秒";
+            prompt = prompt + "(" + week[today.getDay()] + ")," + "欢迎您的到访！"
+            document.write(prompt);
+        </script>
+    </body>
+</html>
